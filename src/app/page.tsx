@@ -1,95 +1,73 @@
-import Image from 'next/image'
-import styles from './page.module.css'
+"use client";
 
 export default function Home() {
   return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>src/app/page.tsx</code>
-        </p>
+    <main>
+      <header>
+        <div>Logo</div>
+
+        <nav>
+          <ul>
+            <li>Product</li>
+
+            <li>Learning Center</li>
+
+            <li>About</li>
+
+            <li>Pricing</li>
+
+            <li>Watch Demo</li>
+          </ul>
+        </nav>
+
         <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+          <ul>
+            <li>Talk to Sales</li>
+
+            <li>My account</li>
+          </ul>
+        </div>
+
+        <style jsx>
+          {`
+            header {
+              display: flex;
+              justify-content: space-between;
+            }
+            ul {
+              display: flex;
+              justify-content: space-between;
+
+            }
+            nav {
+              width: 100vw;
+            }
+          `}
+        </style>
+      </header>
+
+      <div>
+        <a href="/">
+          Watch our brand new series, Fix My Steps, for easy hacks to make you
+          look and feel better in your next video
+        </a>
+      </div>
+
+      <div>
+        <div>
+          <h1>
+The video marketing platform for business</h1>
+
+          <p>Wistia helps marketers create and manage videos, host webinars, generate leads, and measure video performance—all in one place.</p>
+
+          <a href="/">Explore plans</a>
+        </div>
+
+        <div>
+          <video src="#"></video>
+          Video placeholder
         </div>
       </div>
-
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className={styles.grid}>
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore the Next.js 13 playground.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
     </main>
-  )
+  );
 }
