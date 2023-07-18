@@ -20,7 +20,7 @@
     "typescript": "5.1.6"
   },
   "devDependencies": {
-    "@thoughtbot/eslint-config": "^0.1.0",
+    "@thoughtbot/eslint-config": "github:thoughtbot/eslint-config#eslint-configs",
     "eslint-config-prettier": "^8.8.0",
     "prettier": "^3.0.0"
   }
