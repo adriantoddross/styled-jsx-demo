@@ -3,44 +3,58 @@
 export default function Home() {
   return (
     <main>
-      <header>
-        <div>Logo</div>
+      <header className="navbar">
+        <div className="navbar__nav-container">
+          <nav className="navbar__link-container">
 
-        <nav>
-          <ul>
-            <li>Product</li>
+            <ul>
+              <li>Wistia</li>
 
-            <li>Learning Center</li>
+              <li className="navbar__link">Product</li>
 
-            <li>About</li>
+              <li className="navbar__link">Learning Center</li>
 
-            <li>Pricing</li>
+              <li className="navbar__link">About</li>
 
-            <li>Watch Demo</li>
-          </ul>
-        </nav>
+              <li className="navbar__link">Pricing</li>
 
-        <div>
-          <ul>
-            <li>Talk to Sales</li>
+              <li className="navbar__link">Watch Demo</li>
+            </ul>
+          </nav>
 
-            <li>My account</li>
-          </ul>
+          <nav className="navbar__link-container">
+            <ul>
+              <li className="navbar__link navbar__link--small">Talk to Sales</li>
+
+              <li><a href="" className="button-secondary navbar__cta">Login</a></li>
+              <li><a href="" className="button navbar__cta">Get started</a></li>
+
+            </ul>
+          </nav>
         </div>
-
         <style jsx>
           {`
-            header {
-              display: flex;
-              justify-content: space-between;
-            }
-            ul {
-              display: flex;
-              justify-content: space-between;
-
-            }
-            nav {
+          .navbar {
+            display: flex;
+            justify-content: center;
+            align-items: center;
               width: 100vw;
+              height: 65px;
+            }
+            .navbar__nav-container {
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+              max-width: 1350px;
+            }
+            .navbar__link-container ul {
+              display: flex;
+              justify-content: space-between;
+              list-style-type: none;
+              gap: 16px;
+            }
+            
+            .navbar nav {
             }
           `}
         </style>
@@ -56,7 +70,7 @@ export default function Home() {
       <div>
         <div>
           <h1>
-The video marketing platform for business</h1>
+            The video marketing platform for business</h1>
 
           <p>Wistia helps marketers create and manage videos, host webinars, generate leads, and measure video performance—all in one place.</p>
 
