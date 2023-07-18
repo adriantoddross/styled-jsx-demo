@@ -1,3 +1,11 @@
 {
-  "extends": "next/core-web-vitals"
+  "extends": [
+    "next/core-web-vitals",
+    "@thoughtbot/eslint-config"
+    // "@thoughtbot/eslint-config/typescript"
+  ],
+  "rules": {
+    "react/jsx-newline": "warn",
+    "quotes": [2, "double"]
+  }
 }
