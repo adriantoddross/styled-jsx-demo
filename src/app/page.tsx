@@ -212,6 +212,38 @@ export default function Home() {
           </style>
         </header>
       </div>
+      
+      <div>
+        <h2>Go live and edit videos the easy way</h2>
+        <section>
+          <div>Icon</div>
+          <h3>Sub title</h3>
+          <p>Description</p>
+          <a href="/">Learn more</a>
+        </section>
+
+        <section>
+          <div>Icon</div>
+          <h3>Rely on super-fast and secure hosting</h3>
+          <p>Description</p>
+          <a href="/">Learn more</a>
+        </section>
+
+        <section>
+          <div>Icon</div>
+          <h3>Turn viewers into customers</h3>
+          <p>Description</p>
+          <a href="/">Learn more</a>
+        </section>
+
+        <section>
+          <div>Icon</div>
+          <h3>Use video data to shape your strategy</h3>
+          <p>Description</p>
+          <a href="/">Learn more</a>
+        </section>
+      </div>
+
     </main>
   );
 }
