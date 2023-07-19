@@ -3,7 +3,7 @@
 export default function Home() {
   return (
     <main>
-      <header className="navbar">
+      <nav className="navbar">
         <div className="navbar__nav-container">
           <nav className="navbar__link-container navbar__link-container-main">
             <ul>
@@ -43,7 +43,7 @@ export default function Home() {
             </ul>
           </nav>
         </div>
-        <style jsx>
+        <style jsx global>
           {`
             .navbar {
               display: flex;
@@ -89,10 +89,19 @@ export default function Home() {
               border: 1px solid gray;
               color: inherit;
             }
+
+            .anchorButton-large {
+              min-height: 180px;
+            }
             
+            @media screen and (max-width: 768px) {
+              .navbar__nav-container {
+                display: none;
+              }
+            }
           `}
         </style>
-      </header>
+      </nav>
 
       <div>
         <div className="banner">
@@ -102,41 +111,106 @@ export default function Home() {
           </a>
           <style jsx>
             {`
-            .banner {
-              background-color: #815fe0;
-              height: 65px;
-              width: 100%;
-              display: grid;
-              place-items: center;
-              padding: 0 10px;
-            }
-            .banner:hover {
-              background-color: #4c3885;
-              -webkit-transition:background-color 0.25s linear; 
-            }
-            .banner__link {
-              color: white;
-              text-decoration: none;
-            }
-          `}
+              .banner {
+                background-color: #815fe0;
+                height: 65px;
+                width: 100%;
+                display: grid;
+                place-items: center;
+                padding: 0 10px;
+              }
+              .banner:hover {
+                background-color: #4c3885;
+                -webkit-transition: background-color 0.25s linear;
+              }
+              .banner__link {
+                color: white;
+                text-decoration: none;
+              }
+            `}
           </style>
         </div>
 
-        <div>
-          <h1>The video marketing platform for business</h1>
+        <header className="hero">
+          <div className="hero__container">
+            <div className="hero__description">
+              <h1 className="hero__title">
+                The video marketing platform for business
+              </h1>
 
-          <p>
-            Wistia helps marketers create and manage videos, host webinars,
-            generate leads, and measure video performance—all in one place.
-          </p>
+              <div>
+                <p className="hero__subtitle">
+                  Wistia helps marketers create and manage videos, host
+                  webinars, generate leads, and measure video performance—all in
+                  one place.
+                </p>
 
-          <a href="/">Explore plans</a>
-        </div>
+                <div className="button-row">
+                  <a
+                    href="/"
+                    className="anchorButton anchorButton-large anchorButton-main"
+                  >
+                    Explore plans
+                  </a>
+                </div>
+              </div>
+            </div>
 
-        <div>
-          <video src="#"></video>
-          Video placeholder
-        </div>
+            <div className="hero__video">
+              <video src="#"></video>
+              Video placeholder
+            </div>
+          </div>
+
+          <style jsx>
+            {`
+              .hero {
+                background-attachment: scroll;
+                background-image: url("https://images.ctfassets.net/j7pfe8y48ry3/5mL7EUkS7jgyPf3i0dixxZ/5cfa3f21b1ddf53ba44e9c549b199414/Home_-_Background_Image_2x.png");
+                background-position: center bottom;
+                background-size: cover;
+                background-repeat: repeat;
+              }
+
+              .hero__container {
+                display: grid;
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+                grid-column-gap: clamp(1rem, 13vw, 120px);
+                margin: 0 auto;
+                max-width: 1300px;
+              }
+
+              .hero__title {
+                font-size: 3.4rem;
+                padding-top: 1rem;
+                line-height: 1.25;
+              }
+              .hero__subtitle {
+                font-size: 1.5rem;
+                padding-top: 1rem;
+                line-height: 1.25;
+              }
+
+              @media screen and (max-width: 768px) {
+                .hero__container {
+                  display: block;
+                  padding: 25px;
+                }
+
+                .hero__video {
+                  display: none;
+                }
+
+                .hero__title {
+                  font-size: 2.25rem;
+                }
+                .hero__subtitle {
+                  font-size: 1.25rem;
+                }
+              }
+            `}
+          </style>
+        </header>
       </div>
     </main>
   );
